@@ -5,14 +5,14 @@ class ActionMessage extends Component {
     render() {
         let message;
         if (this.props.flag) {
-            message = "Please click on button to go live";
+            message = <h2>Please click on button to go live</h2>;
         } else {
-            message = "Congratulations...!! You are live now.";
+            message = <h2>Congratulations...!! You are live now.</h2>;
         }
 
         return (
             <div className="container">
-                <h2>{message}</h2>
+                {message}
             </div>
         );
     }
