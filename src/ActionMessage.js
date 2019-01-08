@@ -5,9 +5,9 @@ class ActionMessage extends Component {
     render() {
         let message;
         if (this.props.flag) {
-            message = <h2>Please click on button to go live</h2>;
+            message = <h6>Please click on button to go live</h6>;
         } else {
-            message = <h2>Congratulations...!! You are live now.</h2>;
+            message = <h6>Congratulations...!! You are live now.</h6>;
         }
 
         return (

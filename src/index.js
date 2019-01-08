@@ -2,15 +2,20 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import './index.css';
-import App from './App';
-import MyTitle from './MyTitle';
 import * as serviceWorker from './serviceWorker';
+import Sidebar from './sidebar';
+import App from './App';
 
 
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
-ReactDOM.render(<MyTitle name="Welcome" />, document.getElementById('myTitle'));
+     setTimeout( () =>{
+        ReactDOM.render(<Sidebar />, document.getElementById('root'))
+     },1500);
+
+
+// ReactDOM.render(<MyTitle name="Welcome" />, document.getElementById('myTitle'));
 
 
 

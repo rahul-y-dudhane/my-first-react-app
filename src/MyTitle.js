@@ -8,7 +8,6 @@ class MyTitle extends Component {
 
     constructor(props) {
         super(props);
-        console.log(props);
         this.start = this.start.bind(this);
         this.stop = this.stop.bind(this);
 
@@ -65,12 +64,14 @@ class MyTitle extends Component {
      */
     render() {
         return (
-            <div>
-                <h1>{this.props.name}</h1>
-                <h2>{this.state.date.toLocaleTimeString()}</h2>
-                <Button hidden={this.state.disabledBtn} onClick={this.stop} color="danger">Stop</Button>
-                <button hidden={!this.state.disabledBtn} onClick={this.start} className="btn btn-info">Go Live  </button>
-                <ActionMessage flag={this.state.disabledBtn} />
+            <div className="card card-mytitle">
+                <div className="card-body">
+                    <h4>{this.props.name} !</h4>
+                    <h6>{this.state.date.toLocaleTimeString()}</h6>
+                    <Button hidden={this.state.disabledBtn} onClick={this.stop} color="danger">Stop</Button>
+                    <button hidden={!this.state.disabledBtn} onClick={this.start} className="btn btn-info">Go Live  </button>
+                    <ActionMessage flag={this.state.disabledBtn} />
+                </div>
             </div>
         );
     }
